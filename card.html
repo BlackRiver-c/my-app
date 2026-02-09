@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Мой ID</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="top-header">
+        <div class="bell-btn notification-btn">
+            Сповіщення 
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 22C13.1 22 14 21.1 14 20H10C10 21.1 10.9 22 12 22ZM18 16V11C18 7.93 16.37 5.36 13.5 4.68V4C13.5 3.17 12.83 2.5 12 2.5C11.17 2.5 10.5 3.17 10.5 4V4.68C7.64 5.36 6 7.92 6 11V16L4 18V19H20V18L18 16Z" fill="black"/>
+            </svg>
+        </div>
+    </header>
+
+<main>
+<div class="card-scene" onclick="this.classList.toggle('is-flipped')">
+    
+    <div class="card-object">
+        <div class="card-face card-front">
+            <div class="card-header">
+                <div>
+                    <div class="card-title">Резерв ID</div> <div style="font-size: 14px; color: #666; margin-top: 20px;">
+                        Дата народження:<br>
+                        <span style="color: #000; display: block; font-weight: 600; margin-top: 10px;">02.07.1999</span>
+                    </div>
+                    <div style="font-size: 14px; color: #666; margin-top: 20px;">
+                        Відстрочка до:<br>
+                        <span style="color: #000; display: block; font-weight: 600; margin-top: 10px;">завершення мобілізації</span>
+                    </div>
+                </div>
+                <img class="card-img" src="./img/logo-black-invert.D4Ir_oPu.png" alt="Logo">
+            </div>
+
+            <div class="user-data">
+                <div class="status-bar">
+                    <div class="marquee-track">
+                        <div class="marquee-item">
+                            • Документ оновлено о 11:42 | 03.02.2026 &nbsp; • &nbsp; Дані актуальні 
+                        </div>
+                        <div class="marquee-item">
+                            • Документ оновлено о 11:42 | 03.02.2026 &nbsp; • &nbsp; Дані актуальні &nbsp; • &nbsp;
+                        </div>
+                    </div>
+                </div>
+
+                <div style="padding-top: 20px;">
+                    <div class="user-role">Сотрудник</div>
+                    <div class="user-name">
+                        СТУПКА<br>
+                        Сергій<br>
+                        Вікторович
+                    </div>
+                </div>
+            </div>
+
+                <div class="fab-btn" onclick="event.stopPropagation(); toggleMenu()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 5V19" stroke="black" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M5 12H19" stroke="black" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                </div>
+        </div>
+
+            <div class="card-face card-back">
+            <h3 style="margin-top: 0;">QR-код дійсний до 15 лютого 2027</h3>
+            
+            <img src="./img/photo_2026-02-08_23-56-14.jpg" alt="qr">
+            
+            </div>
+
+        </div>
+</div>
+
+    
+</main>
+<div class="vac-scr" id="vacancies-screen" style="display: none; padding: 40px 20px; max-width: 600px; margin: 0 auto; height: 100vh;">
+    <div>
+        <h2 style="font-size: 28px; margin-bottom: 24px;">Вакансії</h2>
+    
+        <p style="font-size: 16px; line-height: 1.5; color: #333; margin-bottom: 20px;">
+            Тут знаходяться актуальні посади для роботи в нашому офісі,
+            надані у співпраці з платформою HR Department.
+        </p>
+
+         <p style="font-size: 16px; line-height: 1.5; color: #333; margin-bottom: 40px;">
+            Це найбільший перелік пропозицій, який допоможе знайти ту, що підходить саме вам.
+            Обирайте варіанти, подавайте заявки у кілька кліків і очікуйте відповіді.
+        </p>
+    </div>
+    <div class="vac-bot">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 30px;">
+            <input type="checkbox" id="hide-info" style="width: 24px; height: 24px; border-radius: 10px; accent-color: #1A1A1A;">
+            <label for="hide-info" style="font-size: 16px; color: #1A1A1A; text-align: center;">Більше не показувати</label>
+        </div>
+
+        <button onclick="alert('Переход к списку...')" style="
+            width: 100%;
+            background-color: #FF8A00;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 18px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(255, 138, 0, 0.3);
+            ">Почати</button>
+    </div>
+
+</div>
+<div id="menu-screen" style="
+    display: none; 
+    flex-direction: column; 
+    padding: 20px 20px 30px 20px; 
+    overflow-y: auto; 
+    height: 100%;
+">
+    
+    <h2 style="font-size: 32px; margin-top: 40px; margin-bottom: 5px;">Меню</h2>
+    <p style="color: #888; font-size: 14px; margin-bottom: 25px;">Версія 1.9.1</p>
+
+    <div class="menu-group" style="background: white; border-radius: 20px; padding: 0 20px; margin-bottom: 20px;">
+        <div style="display: flex; align-items: center; padding: 16px 0; border-bottom: 1px solid #eee;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 15px;">
+                <circle cx="12" cy="12" r="10" stroke="#1A1A1A" stroke-width="1.5"/>
+                <path d="M12 7V13" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round"/>
+                <circle cx="12" cy="16" r="1" fill="#1A1A1A"/>
+            </svg>
+            <span style="flex: 1; font-weight: 500; font-size: 17px;">Виправити Дані профілю</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 18L15 12L9 6" stroke="#C4C4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div style="display: flex; align-items: center; padding: 16px 0;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 15px;">
+                <path d="M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18Z" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M22 22L16 16" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span style="flex: 1; font-weight: 500; font-size: 17px;">Перевірка статусів</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 18L15 12L9 6" stroke="#C4C4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+    </div>
+
+    <div class="menu-group" style="background: white; border-radius: 20px; padding: 0 20px; margin-bottom: 20px;">
+        <div style="display: flex; align-items: center; padding: 16px 0; border-bottom: 1px solid #eee;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 15px;">
+                <rect x="6" y="2" width="12" height="20" rx="2" stroke="#1A1A1A" stroke-width="1.5"/>
+            </svg>
+            <span style="flex: 1; font-weight: 500; font-size: 17px;">Пристрої та сесії</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 18L15 12L9 6" stroke="#C4C4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div style="display: flex; align-items: center; padding: 16px 0;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 15px;">
+                <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M19.4 15C20.6 15 21.6 16 21.6 17.2V17.6C21.6 19.3 19.7 20.4 18.2 19.5L18.2 19.5C17.3 19 16.2 19.4 15.8 20.3L15.8 20.3C15.3 21.5 13.9 22 12.8 21.5L12.4 21.3C11.1 20.8 9.7 21.6 9.4 22.9L9.4 22.9C9.1 24.2 7.7 25 6.4 24.7L6 24.6C4.4 24.2 3.5 22.5 4 20.9L4 20.9C4.4 19.9 3.9 18.8 3 18.3L3 18.3C1.8 17.7 1.3 16.3 1.9 15.1L2.1 14.7C2.6 13.4 1.8 12 0.5 11.7L0.5 11.7C-0.8 11.4 -1.6 10 -1.3 8.7L-1.2 8.3C-0.8 6.7 0.9 5.8 2.5 6.3L2.5 6.3C3.5 6.7 4.6 6.2 5.1 5.3L5.1 5.3C5.7 4.1 7.1 3.6 8.3 4.2L8.7 4.4C10 5 11.4 4.2 11.7 2.9L11.7 2.9C12 1.6 13.4 0.8 14.7 1.1L15.1 1.2C16.7 1.6 17.6 3.3 17.1 4.9L17.1 4.9C16.7 5.9 17.2 7 18.1 7.5L18.1 7.5C19.3 8.1 19.8 9.5 19.2 10.7L19 11.1C18.5 12.4 19.3 13.8 20.6 14.1L20.6 14.1" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span style="flex: 1; font-weight: 500; font-size: 17px;">Налаштування</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 18L15 12L9 6" stroke="#C4C4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+    </div>
+
+    <div class="menu-group" style="background: white; border-radius: 20px; padding: 0 20px; margin-bottom: 20px;">
+        <div style="display: flex; align-items: center; padding: 16px 0; border-bottom: 1px solid #eee;">
+             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 15px;">
+                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#1A1A1A" stroke-width="1.5"/>
+                <path d="M9.09 9C9.3251 8.33167 9.78915 7.76811 10.4 7.40913C11.0108 7.05016 11.7289 6.91894 12.4272 7.03871C13.1255 7.15849 13.7588 7.52152 14.2151 8.06353C14.6713 8.60553 14.9211 9.29152 14.92 10C14.92 12 11.92 13 11.92 13" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round"/>
+                <circle cx="12" cy="17" r="1" fill="#1A1A1A"/>
+            </svg>
+            <span style="flex: 1; font-weight: 500; font-size: 17px;">Питання та відповіді</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 18L15 12L9 6" stroke="#C4C4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div style="display: flex; align-items: center; padding: 16px 0;">
+             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 15px;">
+                <path d="M21 12C21 16.97 16.97 21 12 21C7.03 21 3 16.97 3 12C3 7.03 7.03 3 12 3C16.97 3 21 7.03 21 12Z" stroke="#1A1A1A" stroke-width="1.5"/>
+                <path d="M8 12H16" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M12 8V16" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <span style="flex: 1; font-weight: 500; font-size: 17px;">Служба підтримки</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 18L15 12L9 6" stroke="#C4C4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+    </div>
+
+    <div class="menu-group" style="background: white; border-radius: 20px; padding: 0 20px; margin-bottom: 30px;">
+        <div style="display: flex; align-items: center; padding: 16px 0;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 15px;">
+                <rect x="8" y="8" width="12" height="12" rx="2" stroke="#1A1A1A" stroke-width="1.5"/>
+                <path d="M16 4H6C4.9 4 4 4.9 4 6V16" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <span style="flex: 1; font-weight: 500; font-size: 17px;">Копіювати номер ID</span>
+        </div>
+    </div>
+
+    <button style="margin-top: auto; width: 100%; padding: 16px; background: #31312E; color: white; border-radius: 30px; font-size: 18px; font-weight: 600; border: none; cursor: pointer;">
+        Вийти
+    </button>
+
+    <a href="#" style="text-align: center; color: #1A1A1A; font-size: 13px; margin-top: 20px; text-decoration: underline; padding-bottom: 20px;">
+        Повідомлення про обробку<br>персональних даних
+    </a>
+</div>
+
+    <nav>
+        <div class="nav-item active" onclick="switchTab('id')">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="4" y="2" width="16" height="20" rx="3" fill="#1A1A1A"/>
+                    <rect x="7" y="14" width="10" height="2" fill="white"/>
+                    <rect x="7" y="17" width="10" height="2" fill="white"/>
+            </svg>
+            <span>Резерв ID</span>
+        </div>
+        <div class="nav-item" onclick="switchTab('vacancies')" style="opacity: 0.5;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="4.5" y="3.5" width="15" height="17" rx="2.5" stroke="#1A1A1A" stroke-width="3"/>
+                    <path d="M12 8L15 12L12 16L9 12L12 8Z" fill="#1A1A1A"/>
+            </svg>
+            <span>Вакансії</span>
+        </div>
+        <div class="nav-item" onclick="switchTab('menu')" style="opacity: 0.5;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2">
+                <line x1="3" y1="12" x2="21" y2="12"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+            <span>Меню</span>
+        </div>
+    </nav>
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+<div class="bottom-sheet" id="bottomSheet">
+    
+    <div class="sheet-handle"></div>
+
+    <div class="menu-item" onclick="alert('Просмотр данных')">
+        <div class="menu-icon">
+             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+        </div>
+        <span>Переглянути документ</span>
+    </div>
+
+    <div class="menu-item">
+        <div class="menu-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+        </div>
+        <span>Завантажити PDF</span>
+    </div>
+
+    <div class="menu-item">
+        <div class="menu-icon">
+             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M23 4v6h-6"></path>
+                <path d="M1 20v-6h6"></path>
+                <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+            </svg>
+        </div>
+        <span>Оновити документ</span>
+    </div>
+
+    <div class="menu-item">
+        <div class="menu-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="16"></line>
+                <line x1="8" y1="12" x2="16" y2="12"></line>
+            </svg>
+        </div>
+        <span>Розширені дані з реєстру</span>
+    </div>
+    
+    <div class="menu-item">
+        <div class="menu-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="12" y1="18" x2="12" y2="12"></line>
+                <line x1="9" y1="15" x2="15" y2="15"></line>
+            </svg>
+        </div>
+        <span>Подати запит на відстрчоку</span>
+    </div>
+
+    <div class="menu-item">
+        <div class="menu-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <line x1="12" y1="8" x2="12" y2="16"></line>
+                <line x1="8" y1="12" x2="16" y2="12"></line>
+            </svg>
+        </div>
+        <span>направлення на ВЛК</span>
+    </div>
+
+    <div class="menu-item">
+        <div class="menu-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+            </svg>
+        </div>
+        <span>Уточнити контактні дані</span>
+    </div>
+</div>
+<script>
+    function toggleMenu() {
+        var sheet = document.getElementById('bottomSheet');
+        var overlay = document.getElementById('overlay');
+        
+        
+        if (sheet && overlay) {
+            sheet.classList.toggle('active');
+            overlay.classList.toggle('active');
+        } else {
+            alert("Ошибка: Не могу найти меню! Проверь id='bottomSheet'");
+        }
+    }
+    function switchTab(tabName) {
+    
+    const idScreen = document.querySelector('.card-scene');
+    const vacScreen = document.getElementById('vacancies-screen');
+    const menuScreen = document.getElementById('menu-screen'); // <-- НОВЫЙ
+    
+    
+    const header = document.getElementById('top-header');
+    
+    
+    const navItems = document.querySelectorAll('.nav-item');
+    const btnID = navItems[0];
+    const btnVac = navItems[1];
+    const btnMenu = navItems[2]; 
+
+    
+    idScreen.style.display = 'none';
+    vacScreen.style.display = 'none';
+    menuScreen.style.display = 'none';
+    header.style.display = 'none'; 
+
+    
+    btnID.classList.remove('active');
+    btnVac.classList.remove('active');
+    btnMenu.classList.remove('active');
+
+    
+    if (tabName === 'id') {
+        idScreen.style.display = 'block';
+        header.style.display = 'flex';
+        btnID.classList.add('active');
+    } 
+    else if (tabName === 'vacancies') {
+        vacScreen.style.display = 'flex';
+        btnVac.classList.add('active');
+    }
+    else if (tabName === 'menu') {
+        menuScreen.style.display = 'flex';
+        btnMenu.classList.add('active');
+    }
+}
+</script>
+</body>
+</html>
