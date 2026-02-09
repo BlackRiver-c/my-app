@@ -13,9 +13,10 @@
       "type": "image/png"
     },
     {
-      "src": "./img/unnamed.jpg",
+      "src": "/img/unnamed.jpg",
       "sizes": "512x512",
       "type": "image/png"
     }
   ]
+
 }
