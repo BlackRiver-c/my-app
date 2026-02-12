@@ -53,7 +53,7 @@
                 </div>
 
                 <div style="padding-top: 20px;">
-                    <div class="user-role">Військовозобов'язаний</div>
+                    <div class="user-role">Сотрудник</div>
                     <div class="user-name">
                         СТУПКА<br>
                         Сергій<br>
@@ -79,9 +79,6 @@
 
         </div>
 </div>
-
-    
-</main>
 <div class="vac-scr" id="vacancies-screen" style="display: none; padding: 40px 20px; max-width: 600px; margin: 0 auto; height: 100%;">
     <div>
         <h2 style="font-size: 28px; margin-bottom: 24px;">Вакансії</h2>
@@ -119,6 +116,10 @@
     </div>
 
 </div>
+
+    
+</main>
+
 <div id="menu-screen" style="
     display: none; 
     flex-direction: column; 
@@ -239,7 +240,7 @@
     
     <div class="sheet-handle"></div>
 
-    <div class="menu-item" onclick="alert('Просмотр данных')">
+    <div class="menu-item" onclick="openDetails()">
         <div class="menu-icon">
              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10"></circle>
@@ -318,6 +319,132 @@
         <span>Уточнити контактні дані</span>
     </div>
 </div>
+<div id="details-screen" style="
+    display: none; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: var(--bg-color); 
+    z-index: 2000; 
+    overflow-y: auto; 
+    padding: 20px; 
+    box-sizing: border-box;
+">
+    
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
+        <div style="display: flex; align-items: center; gap: 10px;" onclick="closeDetails()">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 18L9 12L15 6" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span style="font-size: 24px; font-weight: 700;">Резерв ID</span>
+        </div>
+        <img class="card-img" src="./img/logo-black-invert.D4Ir_oPu.png" alt="Logo">
+    </div>
+    <div class="status-bar status-bar-iner">
+                    <div class="marquee-track">
+                        <div class="marquee-item">
+                            • Документ оновлено о 11:42 | 03.02.2026 &nbsp; • &nbsp; Дані актуальні 
+                        </div>
+                        <div class="marquee-item">
+                            • Документ оновлено о 11:42 | 03.02.2026 &nbsp; • &nbsp; Дані актуальні &nbsp; • &nbsp;
+                        </div>
+                    </div>
+                </div>
+    
+
+    <div class="info-card">
+        <h2 style="margin: 0 0 5px 0; font-size: 22px;">СТУПКА<br>Сергій<br>Вікторович</h2>
+        <p style="color: #555; font-size: 14px; margin-bottom: 20px;">Військовозобов'язаний</p>
+        
+        <div class="info-row info-row-iner">
+            <span class="info-label">Дата народження:</span>
+            <span class="info-value">02.07.1999</span>
+        </div>
+        <div class="info-row info-row-iner">
+            <span class="info-label">РНОКПП:</span>
+            <span class="info-value">3634202779</span>
+        </div>
+    </div>
+
+    <div class="info-card">
+        <div class="info-row">
+            <span class="info-label">Відстрочка до:</span>
+            <span class="info-value">завершення <br>
+                 мобілізації</span>
+        </div>
+        <div class="info-row info-row-iner" style="margin-top: 10px;">
+            <span class="info-label">Тип відстрочки:</span>
+            <span class="info-value">п.1 ч.3 ст.23</span>
+        </div>
+    </div>
+
+    <div class="info-card">
+        <div class="info-row-block">
+            <span class="info-label">ТЦК та СП:</span>
+            <span class="info-value">1 відділ Вознесенського РТЦК та СП (Південноукраїнськ)</span>
+        </div>
+        
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
+
+        <div class="info-row">
+            <span class="info-label">Звання:</span>
+            <span class="info-value">Солдат</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">ВОС:</span>
+            <span class="info-value">956647</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Категорія обліку:</span>
+            
+        </div>
+        <div class="info-row-block">
+            <span class="info-value">Військовозобов'язаний</span>
+            <span class="info-label">Будівельних робіт, Робітник підсобний</span>
+        </div>
+        <div class="info-row-block">
+            <span class="info-label">Номер в реєстрі Оберіг:</span>
+            <span class="info-value">071020220680925800005</span>
+        </div>
+    </div>
+
+    <div class="info-card">
+        <div class="info-row-block">
+            <span class="info-label">Телефон:</span>
+            <span class="info-value">+380 98 846 7142</span>
+        </div>
+        <div class="info-row-block">
+            <span class="info-label">Email:</span>
+            <span class="info-value">STUPKASERGEI1@GMAIL.COM</span>
+        </div>
+        <div class="info-row-block">
+            <span class="info-label">Адреса проживання:</span>
+            <span class="info-value">Україна, Миколаївська область, м Южноукраїнськ, ВУЛ. ДРУЖБИ НАРОДІВ, б. 33, кв. 18</span>
+        </div>
+    </div>
+
+    <div class="info-card" style="display: flex; gap: 15px; align-items: flex-start; flex-direction: column;">
+        <div style="display: flex; gap: 15px;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" fill="#27AE60"/>
+            <path d="M8 12L11 15L16 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div style="font-weight: 600; margin-bottom: 5px;">Дані оновлено вчасно</div>
+        </div>
+        <div>
+            
+            <div class="info-row">
+                <span class="info-label">Дата останнього <br> уточнення даних:</span>
+                <span class="info-value">13.07.2024</span>
+            </div>
+        </div>
+    </div>
+    
+    <div style="height: 50px;"></div>
+
+</div>
 <script>
     function toggleMenu() {
         var sheet = document.getElementById('bottomSheet');
@@ -335,7 +462,7 @@
     
     const idScreen = document.querySelector('.card-scene');
     const vacScreen = document.getElementById('vacancies-screen');
-    const menuScreen = document.getElementById('menu-screen'); // <-- НОВЫЙ
+    const menuScreen = document.getElementById('menu-screen'); 
     
     
     const header = document.getElementById('top-header');
@@ -372,8 +499,16 @@
         btnMenu.classList.add('active');
     }
 }
+    function openDetails() {
+    
+    document.getElementById('details-screen').style.display = 'block';
+    
+    
+    toggleMenu(); 
+}
+    function closeDetails() {
+    document.getElementById('details-screen').style.display = 'none';
+}
 </script>
 </body>
-
 </html>
-
